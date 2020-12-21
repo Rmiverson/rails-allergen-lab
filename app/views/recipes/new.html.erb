@@ -1,0 +1,13 @@
+<div>
+   <%= form_with model: @recipe do |f| %>
+      <%= f.label :recipe_name %>
+      <%= f.text_field :recipe_name %>
+
+      <%= f.collection_select :user_id, @users, :id, :user_name %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content %>
+
+      <%= f.submit %>
+   <% end %>
+</div>
